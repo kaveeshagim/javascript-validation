@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validation</title>
+    <script>
+        //The return false; statement is used to halt the form submission process
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myForm" action="/action_page.html" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname"><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+
+</html>

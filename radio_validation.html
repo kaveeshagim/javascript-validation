@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Validation</title>
+    <script>
+        function validateForm(form){
+            displayErr = "";
+            if(form.gender[0].checked == false && form.gender[1].checked == false && form.gender[2].checked == false){
+                alert("Please select your gender");
+                return false;
+            }
+            if(displayErr = ""){
+                form.submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="comment" action="#" method="post">
+        Gender: <br/>
+        <input type="radio" name="gender" value="Male">Male <br/>
+        <input type="radio" name="gender" value="Female">Female <br/>
+        <input type="radio" name="gender" value="Other">Other <br/>
+        <input type="submit" name="Submitbutton" value="Submit" onclick="validateForm(this.form)">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
